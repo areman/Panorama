@@ -1,0 +1,1 @@
+../../vendor/assets/javascripts/slick.dataview.js
