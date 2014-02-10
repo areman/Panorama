@@ -226,10 +226,10 @@ createSlickGridExtended('demo_div', data, columns, options, additional_menu_entr
         </div>
         <div style="background-color:lightgray;  padding: 10px;">
             <a href="" onclick="overview(); return false;">Overview</a>&nbsp;&nbsp;&nbsp;
-            <a href="" onclick="show_demo(demo1); return false;" title="Locale='de'">Demo unlimited height and width</a>&nbsp;&nbsp;&nbsp;
-            <a href="" onclick="show_demo(demo2); return false;" title="Locale='de'">Demo limited height, full width</a>&nbsp;&nbsp;&nbsp;
-            <a href="" onclick="show_demo(demo3); return false;" title="Locale='de'">Demo time line with diagram</a>&nbsp;&nbsp;&nbsp;
-            <a href="" onclick="show_demo(demo4); return false;" title="Locale='en'">Demo large data (20000 rows)</a>&nbsp;&nbsp;&nbsp;
+            <a href="" onclick="show_demo(demo1); return false;" title="Table with unlimited height an auto width (table width = sum of minimum column width), locale='de'">Demo unlimited height and width</a>&nbsp;&nbsp;&nbsp;
+            <a href="" onclick="show_demo(demo2); return false;" title="Table with limited height and width = full parent width, locale='de'">Demo limited height, full width</a>&nbsp;&nbsp;&nbsp;
+            <a href="" onclick="show_demo(demo3); return false;" title="Table with datetime column used as x-axis for diagram, locale='de'">Demo time line with diagram</a>&nbsp;&nbsp;&nbsp;
+            <a href="" onclick="show_demo(demo4); return false;" title="Table with large number of rows, locale='en'">Demo large data (20000 rows)</a>&nbsp;&nbsp;&nbsp;
         </div>
         <div id="demo" style="padding: 10px;">
             <div id="demo_footer">
@@ -243,14 +243,17 @@ createSlickGridExtended('demo_div', data, columns, options, additional_menu_entr
             It supports large amount of data by presenting only visible part of data rows as html-DIVs.<br>
             So size of html DOM structure is independent from length of data table to show.<br>
             <br>
-            SlickGridExtended extends SlickGrid with following features:
+            SlickGridExtended extends SlickGrid with following features (some of them available via right click context menu):
             <ul>
                 <li>Automatic sizing of column widths dependent from content width</li>
                 <li>Automatic wraping of column content to prevent horizontal scroll bar</li>
                 <li>Sort columns according to column type (string, float, date). Date and time sorting according to given locale sign.</li>
                 <li>User can change table height with slider at table bottom</li>
-                <li>Context menu (right mouse click) with additional actions</li>
-                <li>Search for column values</li>
+                <li>Context menu (right mouse click in table) with additional actions</li>
+                <li>Filter table result with filter conditions per row (activate filter via context menu "show search filter")</li>
+                <li>Show numeric column content in diagram (x-axis numeric or time line)</li>
+                <li>Export table content in CSV formatted file (import into Excel etc.)</li>
+                <li>Show sum, count and distinct values for numeric columns</li>
 
             </ul>
             SlickGridExtended is used by calling javascript function:<br>
